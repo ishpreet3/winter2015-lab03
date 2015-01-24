@@ -40,6 +40,18 @@
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
+//Homepage	Remapped to first::zzz
+$route['sleep'] = "first/zzz";
+//Homepage	Remapped to welcome::shucks, using wildcard (lock / *)
+$route['lock/(:any)/(:any)'] = "welcome/shucks";
+//Homepage	Remapped to first::gimme/3, using wildcard (show / digit)
+$route['show/(:num)'] = "first/gimme/$1";
+//Homepage	Remapped to guess (new controller)
+$route['dunno'] = "guess";
+//Homepage	Remapped to bingo, using regular expression (4 letters / bingo) (new controller)
+$route['([a-z]{4})/bingo'] = "bingo";
+//Homepage	Remapped to bingo::wisdom, using regular expression (comp + digits / *)
+$route['comp([0-9]{4})/(:any)'] = "bingo/wisdom";
 
 
 /* End of file routes.php */

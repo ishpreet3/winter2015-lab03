@@ -7,16 +7,25 @@
  */
 
 /**
- * Description of guess
+ * Description of bingo
  *
  * @author Administrator
  */
-class Guess extends Application {
+class Bingo extends Application{
     
-    //loads the 4th record from quotes.php
+    //loads the fifth record from quotes.php
     function index() {
         $this->data['pagebody'] = 'justone';
-        $source = $this->quotes->get(4);
+        $source = $this->quotes->get(5);
+        $this->data['who'] = $source['who'];
+        $this->data['what'] = $source['what'];
+        $this->data['mug'] = $source['mug'];
+        $this->render();
+     }
+        //loads the 6th record from quotes.php
+     function wisdom() {
+        $this->data['pagebody'] = 'justone';
+        $source = $this->quotes->get(6);
         $this->data['who'] = $source['who'];
         $this->data['what'] = $source['what'];
         $this->data['mug'] = $source['mug'];

@@ -13,39 +13,32 @@
  */
 class First extends Application{
     //put your code here
+    ////loads the 1st record from quotes.php
      function index() {
         $this->data['pagebody'] = 'justone';
         $source = $this->quotes->first();
-        $who = $source['who'];
-        $what = $source['what'];
-        $mug = $source['mug'];
-        $this->data['who'] = $who;
-        $this->data['what'] = $what;
-        $this->data['mug'] = $mug;
+        $this->data['who'] = $source['who'];
+        $this->data['what'] = $source['what'];
+        $this->data['mug'] = $source['mug'];
         $this->render();
      }
-     
+     //loads the 1st record from quotes.php
      function zzz() {
         $this->data['pagebody'] = 'justone';
         $source = $this->quotes->first();
-        $who = $source['who'];
-        $what = $source['what'];
-        $mug = $source['mug'];
-        $this->data['who'] = $who;
-        $this->data['what'] = $what;
-        $this->data['mug'] = $mug;
+        $this->data['who'] = $source['who'];
+        $this->data['what'] = $source['what'];
+        $this->data['mug'] = $source['mug'];
         $this->render(); 
      }
      
+     //loads the specified record from the Quotes.php
      function gimme($id) {
         $this->data['pagebody'] = 'justone';
         $source = $this->quotes->get($id);
-        $who = $source['who'];
-        $what = $source['what'];
-        $mug = $source['mug'];
-        $this->data['who'] = $who;
-        $this->data['what'] = $what;
-        $this->data['mug'] = $mug;
+        $this->data['who'] = $source['who'];
+        $this->data['what'] = $source['what'];
+        $this->data['mug'] = $source['mug'];
         $this->render(); 
      }
 

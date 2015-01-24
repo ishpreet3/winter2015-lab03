@@ -7,19 +7,22 @@
  */
 
 /**
- * Description of guess
+ * Description of last
  *
  * @author Administrator
  */
-class Guess extends Application {
+class Welcome extends Application{
+    //put your code here
     
-    //loads the 4th record from quotes.php
-    function index() {
+     function index() {
         $this->data['pagebody'] = 'justone';
-        $source = $this->quotes->get(4);
+        $source = $this->quotes->last();
         $this->data['who'] = $source['who'];
         $this->data['what'] = $source['what'];
         $this->data['mug'] = $source['mug'];
         $this->render();
      }
+     
+     
+     
 }

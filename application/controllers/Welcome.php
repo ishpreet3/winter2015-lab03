@@ -30,15 +30,13 @@ class Welcome extends Application {
 
         $this->render();
     }
+    //loads the 2nd record from quotes.php
         function shucks() {
         $this->data['pagebody'] = 'justone';
         $source = $this->quotes->get(2);
-        $who = $source['who'];
-        $what = $source['what'];
-        $mug = $source['mug'];
-        $this->data['who'] = $who;
-        $this->data['what'] = $what;
-        $this->data['mug'] = $mug;
+        $this->data['who'] =  $source['who'];
+        $this->data['what'] = $source['what'];
+        $this->data['mug'] = $source['mug'];
         $this->render();         
      }
 
