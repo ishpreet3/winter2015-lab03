@@ -9,7 +9,12 @@
 |	http://codeigniter.com/user_guide/general/hooks.html
 |
 */
-
+$hook['display_override'] = array(
+                                'class'    => 'Format',
+                                'function' => 'upperCaseBold',
+                                'filename' => 'Format.php',
+                                'filepath' => 'hooks'
+                                );
 
 
 /* End of file hooks.php */
